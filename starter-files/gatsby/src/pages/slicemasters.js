@@ -1,11 +1,10 @@
 import React from 'react';
-import Nav from '../components/Nav';
+import Layout from '../components/Layout';
 
 export default function Slicemasters() {
   return (
-    <div>
-      <Nav />
+    <>
       <p>Welcome to slicemasters page</p>
-    </div>
+    </>
   );
 }
