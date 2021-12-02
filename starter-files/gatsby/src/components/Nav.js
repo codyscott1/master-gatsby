@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 
 export default function Nav() {
@@ -5,10 +6,10 @@ export default function Nav() {
     <nav>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/beers">Beers</a>
+          <Link to="/beers">Beers</Link>
         </li>
       </ul>
     </nav>
