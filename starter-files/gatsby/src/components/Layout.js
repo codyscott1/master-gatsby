@@ -37,10 +37,10 @@ export default function Layout({ children }) {
       <SiteBorderStyles>
         <ContentStyles>
           <Nav />
+          {children}
+          <Footer />
         </ContentStyles>
       </SiteBorderStyles>
-      {children}
-      <Footer />
     </>
   );
 }
