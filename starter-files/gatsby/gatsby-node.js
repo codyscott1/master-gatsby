@@ -13,6 +13,7 @@ async function turnPizzasIntoPages({ graphql, actions }) {
           }
         }
       }
+    }
   `);
   data.pizzas.nodes.forEach((pizza) => {
     actions.createPage({

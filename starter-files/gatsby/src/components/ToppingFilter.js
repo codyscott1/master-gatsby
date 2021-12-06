@@ -68,6 +68,11 @@ export default function ToppingFilter() {
   const toppingsWithCounts = countPizzasInToppings(pizzas.nodes);
   return (
     <ToppingsStyles>
+      <Link to="/pizzas">
+        <span className="name">All</span>
+        <span className="count">{pizzas.nodes.length}</span>
+      </Link>
+
       {toppingsWithCounts.map((topping) => (
         <Link key={topping.id} to={`/topping/${topping.name}`}>
           <span className="name">{topping.name}</span>
