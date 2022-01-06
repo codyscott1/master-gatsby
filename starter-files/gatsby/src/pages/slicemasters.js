@@ -55,19 +55,19 @@ export default function Slicemasters({ data }) {
 }
 
 export const query = graphql`
-  query Slicemasters {
-    slicemasters: allSanityPerson {
+  query($skip: Int! = 0, $pageSize: Int! = 4) {
+    slicemasters: allSanityPerson(limit: $pageSize, skip: $skip) {
       totalCount
       nodes {
         name
         id
-        description
+        description 
         slug {
           current
         }
         image {
           asset {
-            fluid {
+            fluid(maxWidth: 410) {
               ...GatsbySanityImageFluid
             }
           }
