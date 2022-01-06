@@ -6,7 +6,9 @@ const Slicemaster = ({ data: { person } }) => {
   console.log(person);
   return (
     <>
-      <div>{person.name}</div>
+      <h2>
+        <span className="mark">{person.name}</span>
+      </h2>
       <Img fluid={person.image.asset.fluid} />
       <p>{person.description}</p>
     </>
