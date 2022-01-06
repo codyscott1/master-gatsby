@@ -16,12 +16,14 @@ export default function SinglePizzaPage({ data: { pizza } }) {
       <SEO title={pizza.name} image={pizza.image?.asset?.fluid?.src} />
 
       <Img fluid={pizza.image.asset.fluid} />
-      <h2 className="mark">{pizza.name}</h2>
-      <ul>
-        {pizza.toppings.map((topping) => (
-          <li key={topping.id}>{topping.name}</li>
-        ))}
-      </ul>
+      <div>
+        <h2 className="mark">{pizza.name}</h2>
+        <ul>
+          {pizza.toppings.map((topping) => (
+            <li key={topping.id}>{topping.name}</li>
+          ))}
+        </ul>
+      </div>
     </PizzaGrid>
   );
 }
