@@ -13,7 +13,8 @@ const PizzaGrid = styled.div`
 export default function SinglePizzaPage({ data: { pizza } }) {
   return (
     <PizzaGrid>
-      <SEO title={pizza.name} />
+      <SEO title={pizza.name} image={pizza.image?.asset?.fluid?.src} />
+
       <Img fluid={pizza.image.asset.fluid} />
       <h2 className="mark">{pizza.name}</h2>
       <ul>

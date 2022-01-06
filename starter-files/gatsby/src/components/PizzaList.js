@@ -1,5 +1,5 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 
@@ -11,11 +11,11 @@ const PizzaGridStyles = styled.div`
 `;
 
 const PizzaStyles = styled.div`
-  @supports not (grid-template-rows: subgrid) {
-    grid-template-rows: auto auto 1fr;
-  }
   display: grid;
-  grid-template-rows: subgrid;
+  @supports not (grid-template-rows: subgrid) {
+    --rows: auto auto 1fr;
+  }
+  grid-template-rows: var(--rows, subgrid);
   grid-row: span 3;
   grid-gap: 1rem;
   h2,
